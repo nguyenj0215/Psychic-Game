@@ -1,26 +1,35 @@
 body {
     margin: 0 auto;
     text-align: center;
+    background-color: rgb(39, 37, 37);
 }
 h1 {
     padding: 25px;
     font-weight: bold;
     color: yellow;
     background-image: linear-gradient(to bottom right, blue, green);
-    font-size: 35px;
+    font-size: 45px;
 }
 .guessLabel {
-    width: 50%;
+    width: 100%;
     background-image: linear-gradient(to top right, blue, green);
     margin: 0 auto;
+    padding: 20px;
+    font-size: 25px;
+    color: white;
+    margin-left: -25px;
+    padding-top: 0;
+    border-bottom: 5px solid black;
 }
 .displayCounters {
-    border: 3px solid black;
+    border: 5px solid black;
     margin: 0 auto;
-    width: 50%;
+    width: 30%;
     margin-top: 25px;
     padding: 15px;
     line-height: 200%;
     background-image: linear-gradient(to top right, yellow, red);
     font-weight: bold;
+    font-size: 20px;
+    text-align: left;
 }

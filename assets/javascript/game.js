@@ -13,36 +13,36 @@ function psychicGame() {
     guessesArray = [];
     guessesLeft = 9;
 
-    console.log(randomLetter)
 }
 
-document.onkeydown = function (event) {
+document.onkeyup = function (event) {
 
     guesses = event.key;
 
-    console.log(guesses)
-
-    if (guessesLeft > 0 && guesses == randomLetter) {
-        wins++;
-        psychicGame();
-    }
-    else if (guessesLeft > 0 && guesses != randomLetter) {
-        guessesArray.push(guesses);
-        guessesLeft--;
+    if (guesses === "a" || guesses === "b" || guesses === "c" || guesses === "d" || guesses === "e" || guesses === "f" || guesses === "g" || guesses === "h" || guesses === "i" || guesses === "j" || guesses === "k" || guesses === "l" || guesses === "m" || guesses === "n" || guesses === "o" || guesses === "p" || guesses === "q" || guesses === "r" || guesses === "s" || guesses === "t" || guesses === "u" || guesses === "v" || guesses === "w" || guesses === "x" || guesses === "y" || guesses === "z") {
+        if (guessesLeft > 0 && guesses == randomLetter) {
+            wins++;
+            psychicGame();
+        }
+        else if (guessesLeft > 0 && guesses != randomLetter) {
+            guessesArray.push(guesses);
+            guessesLeft--;
+        }
+        else {
+            losses++;
+            psychicGame();
+        }
     }
     else {
-        losses++;
-        psychicGame();
+        alert("Enter a letter")
     }
-
     document.getElementById("guessLeft").innerHTML = guessesLeft;
     document.getElementById("winCount").innerHTML = wins;
     document.getElementById("lossCount").innerHTML = losses;
     document.getElementById("guessesSoFar").innerHTML = guessesArray;
 
-    console.log(wins)
-}
 
+}
 psychicGame();
 
 
